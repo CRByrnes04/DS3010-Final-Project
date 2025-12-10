@@ -51,6 +51,12 @@ def predict_function(*inputs):
     # Create a DataFrame with column names to satisfy models fitted with feature names
     X = pd.DataFrame([processed], columns=feature_cols)
     prediction = model.predict(X)[0]
+    
+    if(prediction == 1):
+        prediction = "Approved"
+    else:
+        prediction = "Not Approved"
+        
     return f"Prediction: {prediction}"
 
 
