@@ -72,7 +72,7 @@ demo = gr.Interface(
         gr.Number(label='Coapplicant Income (Monthly)'),
         gr.Number(label='Loan Amount (Thousands)'),
         gr.Number(label='Loan Amount Term (Days)'),
-        gr.Number(label='Credit History (1 for yes, 0 for no)'),
+        gr.Dropdown(['1', '0'], label='Credit History (1 for yes, 0 for no)'),
         gr.Dropdown(['Urban', 'Semiurban', 'Rural'], label='Property Area'),
     ],
     outputs="text",
