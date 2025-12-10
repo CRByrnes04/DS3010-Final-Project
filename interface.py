@@ -10,7 +10,7 @@ feature_cols = [
     'Credit_History', 'Property_Area'
 ]
 
-# Simple encoders to turn categoricals into numeric values; adjust to match training if needed.
+# Simple encoders to turn categoricals into numeric values
 encoders = {
     'Gender': {'Male': 1, 'Female': 0},
     'Married': {'Yes': 1, 'No': 0},
@@ -69,11 +69,11 @@ demo = gr.Interface(
         gr.Number(label='Credit History'),
         gr.Dropdown(['Urban', 'Semiurban', 'Rural'], label='Property Area'),
     ],
-    outputs="Loan Status",
+    outputs="text",
     title="Loan Eligibility Prediction",
     description="Provide applicant details to predict loan approval status."
 )
 
 
-demo.launch()
+demo.launch(share=True)
 
